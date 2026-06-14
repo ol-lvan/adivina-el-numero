@@ -1,0 +1,18 @@
+<!DOCTYPE html> <!-- Para decirle al navegador que se usa html -->
+<html lang="es"> <!-- Escoje el lenguaje de la pagina -->
+<head> <!--En donde van todo lo relacionado con la configuracion de la pagina-->
+    <meta charset="UTF-8"> <!--Para que los caracteres esten bien--> 
+    <title>Juego Adivina el Número</title> <!--El titulo que sale en la pestaña del navegador--> 
+</head>
+<body> <!-- en donde va el contenido de la pagina -->
+    <h1>Adivina el Numero</h1> <!--Titulo que aparece en la pagina--> 
+    <p>Abre la consola del navegador con F12 para ver los resultados.</p> <!--Un parafo--> 
+
+    <input type="number" id="inputNumero" min="1" max="10"> <!--En donde el usuario escribe el numero-->
+    <button onclick="comprobarIntento()">Probar suerte</button> <!--Crear ek boton-->
+
+    <h2 id="resultado"></h2> <!--Aqui se escribe el resultado en la pagina-->
+
+    <script src="AdivinaElNumero.js"></script> <!--Conectar el script con la pagina (html)--> 
+</body>
+</html>
