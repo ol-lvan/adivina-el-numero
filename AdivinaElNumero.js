@@ -15,6 +15,7 @@ function comprobarIntento() {
     // Buscamos el h2 donde escribiremos el resultado
     let textoResultado = document.getElementById("resultado");
 
+    // Validamos si el intento del usuario esta vacio
     if(isNaN(intentoUsuario)) {
         textoResultado.innerText = "Numero no valido.";
         textoResultado.style.color = "red";
