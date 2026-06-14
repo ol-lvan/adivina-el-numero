@@ -8,11 +8,11 @@ numeroAleatorio = Math.floor(Math.random() * ((max - min + 1)) + min);
 
 // Crear una funcion para el input y se ejecuta cuando haces clic en el botón
 function comprobarIntento() {
-// 1. Buscamos el input en el HTML y leemos su valor
+// Buscamos el input en el HTML y leemos su valor
     let cajaTexto = document.getElementById("inputNumero");
     let intentoUsuario = parseInt(cajaTexto.value); // Cambiamos el tipo de dato a int
 
-    // 2. Buscamos el h2 donde escribiremos el resultado
+    // Buscamos el h2 donde escribiremos el resultado
     let textoResultado = document.getElementById("resultado");
 
     if(isNaN(intentoUsuario)) {
@@ -20,14 +20,19 @@ function comprobarIntento() {
         textoResultado.style.color = "red";
         return;
     }
-    
+
+    // Validamos si el intento del usuario es igual al numero aleatorio
     if (intentoUsuario === numeroAleatorio) {
-        textoResultado.innerText = "¡Felicidades! Adivinaste.";
-        textoResultado.style.color = "green";
-    } else if(intentoUsuario < numeroAleatorio) {
+        textoResultado.innerText = "¡Felicidades! Adivinaste."; // Mostrar el texto en la pagina
+        textoResultado.style.color = "green"; // Asignarle un color al texto
+    } 
+        // Validamos si el intento del usuario es menor al numero aleatorio
+    else if(intentoUsuario < numeroAleatorio) {
         textoResultado.innerText = "Muy bajo";
         textoResultado.style.color = "Orange";
-    } else if(intentoUsuario > numeroAleatorio) {
+    } 
+        // Validamos si el intento del usuario es mayor al numero aleatorio
+    else if(intentoUsuario > numeroAleatorio) {
         textoResultado.innerText = "Muy alto";
         textoResultado.style.color = "Orange";
     } 
